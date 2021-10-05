@@ -1,0 +1,162 @@
+.firssection{
+    background-color: #4169e1;;
+    
+}
+
+.games{
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    max-height: 300px;
+    padding: 10rem;
+}
+
+.games .img{
+    flex-basis: 50%;
+    width: 450px;
+}
+
+.games img{
+    object-fit: cover;
+    width: 80%;
+    margin-top: 180px;
+}
+
+.games h2{
+    font-size: 3.2rem;
+    margin-bottom: 1rem;
+}
+
+.games::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-top: 80px solid #100d10;
+    border-left: 2000px solid transparent;
+    border-right: 20px solid transparent;
+}
+
+.games p{
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.games button{
+    color: #4169e1;;
+    border: none;
+    padding: 1rem;
+    border-radius: 5px;
+    background: #f2f6fa;
+    font-weight: 600;
+}
+
+.secondsection{
+    padding: 0 10rem;
+    /* max-height: 800px; */
+}
+
+.tournaments{
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+
+}
+
+.tournaments .content{
+        flex-basis: 100%;
+}
+
+
+
+.tournaments img{
+    object-fit: cover;
+    width: 80%;
+    /* margin-top: 180px; */
+    margin-left: 100px;
+}
+
+
+.tournaments::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-top: 80px solid #4169e1;;
+    border-left: 2000px solid transparent;
+    border-right: 20px solid transparent;
+}
+
+.tournaments h2{
+    font-size: 3.2rem;
+    margin-bottom: 1rem;
+}
+
+.tournaments p{
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.tournaments button{
+    background: #4169e1;;
+    border: none;
+    padding: 1rem;
+    border-radius: 5px;
+    color: #f2f6fa;
+    font-weight: 600;
+}
+
+.build{
+    padding: 2.5rem;
+    border-radius: 1rem;
+    background: #4169e1;;
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    
+}
+
+.build::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-top: 80px solid #100d10;
+    border-left: 20px solid transparent;
+    border-right: 2000px solid transparent;
+}
+
+
+.build h2{
+    font-size: 3.2rem;
+    margin-bottom: 1rem;
+}
+
+.build p{
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.build button{
+    color: #4169e1;;
+    border: none;
+    padding: 1rem;
+    border-radius: 5px;
+    background: #f2f6fa;
+    font-weight: 600;
+}
+
+.altsection{
+    background-color: rgba(255, 255, 255, .05);
+    padding: 10rem;
+}

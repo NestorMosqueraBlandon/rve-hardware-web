@@ -1,0 +1,88 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+html{
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.6rem;
+  background-color: #100f10;
+  color: #f2f6fa;
+  min-height: 100vh;
+
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul{
+  list-style: none;
+}
+
+button{
+  cursor: pointer;
+}
+
+section{
+  position: relative;
+}
+
+img{
+  width: 100%;
+  object-fit: cover;
+}
+
+.blue{
+  color: royalblue;
+}
+
+/* GENERAL */
+.newsletter{
+  width: 600px;
+  margin: 20px auto;
+  background-color: rgba(255, 255, 255, .1);
+  padding: 2rem;
+  border-radius: .5rem;
+}
+
+.newsletter h2{
+  font-size: 1.8rem;
+}
+
+.newsletter p{
+  font-size: 1.3rem;
+}
+
+.newsletter .form-group-duo{
+  display: flex;
+  gap: 1rem;
+}
+
+.newsletter input{
+  border: none;
+  padding: 1rem;
+  border-radius: .5rem;
+  background-color: rgba(255, 255, 255, .05);
+  color: #f2f6fa;
+  margin: 1rem 0;
+}
+
+.newsletter button{
+  background-color: royalblue;
+  color: #f2f6fa;
+  border: none;
+  padding: .5rem 1rem;
+  border-radius: 1rem;
+  font-weight: 600;
+}
+
+.container{
+  margin: 0 auto;
+  width: 620px;
+}
