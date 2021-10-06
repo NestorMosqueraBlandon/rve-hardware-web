@@ -1,6 +1,5 @@
 import Layout from "../components/Layout";
 import styles from '../styles/Blog.module.css'
-import blog from "./blog/[id]";
 export default function Temp() {
     return (
         <Layout>
