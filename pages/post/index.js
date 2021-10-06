@@ -4,7 +4,7 @@ import data from "../../data";
 import styles from '../../styles/Blog.module.css'
 import {ApolloClient, InMemoryCache, gql}from "@apollo/client"
 import { format, register } from 'timeago.js';
-export default function index({posts}) {
+export default function Index({posts}) {
 
     register('es_ES', (number, index, total_sec) => [
         ['justo ahora', 'ahora mismo'],

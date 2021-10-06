@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-export default function index() {
+export default function Index() {
 
     const [config, setConfig] = useState({
         brand: 'INTEL',
