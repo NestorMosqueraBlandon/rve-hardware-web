@@ -41,13 +41,13 @@ export default function Index({posts}) {
             </div>
             <div className={styles.blogbanner}>
                 <picture>
-                    <img src="/mine.jpg" alt="" />
+                    <img src="/bg.jpg" alt={posts[posts.lenght - 1].title} />
                 </picture>
                 <div>
-                    <span>Gaming</span>
-                    <h2>Como crear un server de Minecraft gratis y alojarlo online</h2>
-                    <p>Como crear un servidor de MInecraft gratis y alojarlo en linea usando plataformas de servers de Minecraft como Aternos</p>
-                    <button>Ver mas</button>
+                    <span>{posts[posts.lenght - 1].category}</span>
+                    <h2> {posts[posts.lenght - 1].title}</h2>
+                    <p>{posts[posts.lenght - 1].description}</p>
+                    <Link href={`/post/${posts[posts.lenght - 1].slug}`}>Ver mas</Link>
                 </div>
             </div>
 
