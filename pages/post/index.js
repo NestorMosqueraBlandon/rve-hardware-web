@@ -41,13 +41,13 @@ export default function Index({posts}) {
             </div>
             <div className={styles.blogbanner}>
                 <picture>
-                    <img src="/bg.jpg" alt={posts[posts.lenght - 1].title} />
+                    <img src="/bg.png" alt={posts[posts.length - 1].title} />
                 </picture>
                 <div>
-                    <span>{posts[posts.lenght - 1].category}</span>
-                    <h2> {posts[posts.lenght - 1].title}</h2>
-                    <p>{posts[posts.lenght - 1].description}</p>
-                    <Link href={`/post/${posts[posts.lenght - 1].slug}`}>Ver mas</Link>
+                    <span>{posts[posts.length - 1].category}</span>
+                    <h2> {posts[posts.length - 1].title}</h2>
+                    <p>{posts[posts.length - 1].description}</p>
+                    <Link href={`/post/${posts[posts.length - 1].slug}`}>Ver mas</Link>
                 </div>
             </div>
 
