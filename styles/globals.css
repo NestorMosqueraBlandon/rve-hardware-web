@@ -1,6 +1,7 @@
 *{
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 
 html{
@@ -44,7 +45,7 @@ img{
 
 /* GENERAL */
 .newsletter{
-  width: 600px;
+  width: 100%;
   margin: 20px auto;
   background-color: rgba(255, 255, 255, .1);
   padding: 2rem;
@@ -61,6 +62,7 @@ img{
 
 .newsletter .form-group-duo{
   display: flex;
+  flex-wrap: wrap;
   gap: 1rem;
 }
 
@@ -70,7 +72,8 @@ img{
   border-radius: .5rem;
   background-color: rgba(255, 255, 255, .05);
   color: #f2f6fa;
-  margin: 1rem 0;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
 }
 
 .newsletter button{
@@ -83,6 +86,29 @@ img{
 }
 
 .container{
-  margin: 0 auto;
-  width: 620px;
+  /* margin: 0 2rem; */
+  width: 100%;
+
+}
+
+.container p{
+  padding: 1rem 2rem;
+}
+
+.container ul{
+  padding: 1rem 2rem;
+  list-style: disc;
+}
+
+.container h3{
+  padding: 1rem 2rem;
+}
+
+.container ul li{
+  margin-left: 3rem;
+}
+@media screen and (max-width: 900px) {
+  
+  body{
+  }
 }

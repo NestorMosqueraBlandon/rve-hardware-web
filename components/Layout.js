@@ -20,7 +20,7 @@ export default function Layout({title, description, children}) {
             <main>
                 {children}
             </main>
-            <Footer />
+            {/* <Footer /> */}
         </>
     )
 }

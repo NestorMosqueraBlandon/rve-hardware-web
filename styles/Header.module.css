@@ -1,4 +1,104 @@
+.header{
+  height: 40px;
+  border-bottom: 1px solid rgba(255, 255, 255, .1);
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+  padding: .5rem 1rem;
+}
 
+.nav{
+    position: absolute;
+    left: 0px;
+    top: 0;
+    width: 80vw;
+    min-height: 100vh;
+    background-color: #100f10;
+    padding:2rem;
+    transition: 1s;
+}
+
+.navopen{
+    position: absolute;
+    left: -400px;
+    top: 0;
+    width: 80vw;
+    min-height: 100vh;
+    background-color: #100f10;
+    padding:2rem;
+    transition: 1s;
+}
+
+.logo img{
+    width: 20px;
+}
+
+.logo p{
+    display: none;
+}
+
+.menu i{
+    font-size: 2.5rem;
+    cursor: pointer;
+}
+
+.headerfooter{
+    display: flex;
+    flex-direction: column;
+}
+
+.navclose{
+    border: none;
+    background-color: transparent;
+    color: #f2f6fa;
+    font-size: 2.5rem;
+}
+
+.success{
+    background: #4169e1;;
+    border: none;
+    padding: 1rem;
+    border-radius: 5px;
+    color: #f2f6fa;
+    font-weight: 600;
+    margin: 0 1rem;
+}
+
+.normal{
+    background: rgba(255, 255, 255, .05);
+    border: none;
+    padding: 1rem;
+    border-radius: 5px;
+    color: #f2f6fa;
+    font-weight: 600;
+    margin: 1rem;
+}
+
+.select{
+    border: none;
+    background-color: transparent;
+    color: rgba(255, 255, 255, .5);
+    margin: 2rem;
+    outline: none;
+}
+
+.fot{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.nav ul, .navopen ul{
+    margin-left: 1rem;
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+/*
 .nav{
     padding: 1.5rem 10rem ;
     display: flex;
@@ -19,7 +119,6 @@
 .nav ul li{
     padding: 1rem 1.5rem;
     font-size: 1.4rem;
-    /* color: rgba(255, 255, 255, .5); */
 }
 
 .nav ul li:first-child{
@@ -31,30 +130,13 @@
     border-right: 1px solid rgba(255, 255, 255, .1);
 }
 
-.select{
-    border: none;
-    background-color: transparent;
-    color: rgba(255, 255, 255, .5);
-    margin-right: 2rem;
-    outline: none;
-}
 
-.success{
-    background: #4169e1;;
-    border: none;
-    padding: 1rem;
-    border-radius: 5px;
-    color: #f2f6fa;
-    font-weight: 600;
-    margin: 0 1rem;
-}
 
-.normal{
-    background: rgba(255, 255, 255, .05);
-    border: none;
-    padding: 1rem;
-    border-radius: 5px;
-    color: #f2f6fa;
-    font-weight: 600;
-    margin: 0 1rem;
+
+
+ */
+
+@media screen and (max-width: 900px) {
+
+
 }

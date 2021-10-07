@@ -72,7 +72,7 @@ export default function Index({posts}) {
     )
 }
 
-export async function getStaticProps(){
+export async function getServerSideProps(){
 
     const client = new ApolloClient({
         uri: "https://rveapiql.herokuapp.com",

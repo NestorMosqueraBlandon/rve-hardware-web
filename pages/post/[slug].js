@@ -24,7 +24,7 @@ export default function blog(props) {
                         <span><i className='bx bx-calendar-event'></i> Oct 1, 2021</span>
                     </div>
                     <picture>
-                        <img src="./fornite.jpg" alt="" />
+                        <img src={`../bg.png`} alt="" />
                     </picture>
                 </div>
                 <div></div>

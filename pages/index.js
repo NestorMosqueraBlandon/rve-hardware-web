@@ -9,7 +9,7 @@ export default function Home() {
 
   return (
     <Layout>
-      <section className={styles.firssection}>
+      {/* <section className={styles.firssection}>
 
         <div className={styles.games}>
           <div className={styles.img}>
@@ -49,7 +49,7 @@ export default function Home() {
           <div>
           </div>
         </div>
-      </section>
+      </section> */}
     </Layout>
   )
 }
