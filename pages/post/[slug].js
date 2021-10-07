@@ -1,10 +1,33 @@
 import React from 'react'
-import {ApolloClient, InMemoryCache, gql}from "@apollo/client"
+import { ApolloClient, InMemoryCache, gql } from "@apollo/client"
 import Layout from '../../components/Layout';
 import styles from '../../styles/Blog.module.css'
+import { format, register } from 'timeago.js';
+
 export default function blog(props) {
-    
-    const {post} = props;
+
+
+    register('es_ES', (number, index, total_sec) => [
+        ['justo ahora', 'ahora mismo'],
+        ['hace %s segundos', 'en %s segundos'],
+        ['hace 1 minuto', 'en 1 minuto'],
+        ['hace %s minutos', 'en %s minutos'],
+        ['hace 1 hora', 'en 1 hora'],
+        ['hace %s horas', 'in %s horas'],
+        ['hace 1 dia', 'en 1 dia'],
+        ['hace %s dias', 'en %s dias'],
+        ['hace 1 semana', 'en 1 semana'],
+        ['hace %s semanas', 'en %s semanas'],
+        ['1 mes', 'en 1 mes'],
+        ['hace %s meses', 'en %s meses'],
+        ['hace 1 año', 'en 1 año'],
+        ['hace %s años', 'en %s años']
+    ][index]);
+
+
+    const timeago = timestamp => format(timestamp, 'es_ES');
+
+    const { post } = props;
 
     console.log(post[0].title)
     return (
@@ -21,16 +44,16 @@ export default function blog(props) {
                     <h2>{post[0].title}</h2>
                     <div className={styles.contentdata}>
                         <span className={styles.blogcategory}> <i className='blue bx bxs-circle'></i> {post[0].category}</span>
-                        <span><i className='bx bx-calendar-event'></i> Oct 1, 2021</span>
+                        <span><i className='bx bx-calendar-event'></i> {timeago(post.createdAt)} </span>
                     </div>
                     <picture>
-                        <img src={`../bg.png`} alt="" />
+                        <img src={`../bg.png`} alt={post[0].title} />
                     </picture>
                 </div>
                 <div></div>
             </div>
 
-            <div className="container" dangerouslySetInnerHTML={{__html:post[0].sanitizedHtml}} ></div>
+            <div className="container" dangerouslySetInnerHTML={{ __html: post[0].sanitizedHtml }} ></div>
 
             <div className="newsletter">
                 <h2><i className='bx bx-paper-plane'></i> Suscribete</h2>
@@ -47,7 +70,7 @@ export default function blog(props) {
     )
 }
 
-export async function getServerSideProps(context){
+export async function getServerSideProps(context) {
     const { params } = context;
     const { slug } = params;
 
@@ -56,7 +79,7 @@ export async function getServerSideProps(context){
         cache: new InMemoryCache()
     })
 
-    const {data} = await client.query({
+    const { data } = await client.query({
         query: gql`
         query {
           post(slug: "${slug}"){
