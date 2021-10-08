@@ -114,6 +114,8 @@ img{
 section{
   padding: 2rem 0;
 }
+
+
 @media screen and (min-width: 900px) {
   
   .container{

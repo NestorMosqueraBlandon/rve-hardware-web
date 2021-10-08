@@ -3,7 +3,7 @@ import Footer from "./Footer";
 import Header from "./Header";
 import styles from '../styles/Layout.module.css'
 
-export default function Layout({title, description, children}) {
+export default function Layout({title, description, children, logo}) {
     return (
         <>
             <Head>
@@ -16,7 +16,7 @@ export default function Layout({title, description, children}) {
                 <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'/>
 
             </Head>
-            <Header />
+            <Header logo={logo} />
             <main>
                 {children}
             </main>

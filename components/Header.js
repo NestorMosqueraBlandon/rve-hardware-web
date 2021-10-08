@@ -1,7 +1,7 @@
 import styles from '../styles/Header.module.css'
 import Link from 'next/link';
 import { useState } from 'react';
-export default function Header() {
+export default function Header({logo}) {
 
     const [openMenu, setOpenMenu] = useState(false)
 
@@ -11,7 +11,7 @@ export default function Header() {
               <i className='bx bx-menu' ></i>
             </div>
             <div className={styles.logo}>
-                <img src={"./logo.svg"? "./logo.svg" : "../logo.svg" } alt="Real Vision Hardware Logo" />
+                <img src={logo} alt="Real Vision Hardware Logo" />
             </div>
             <div>
 
@@ -20,7 +20,7 @@ export default function Header() {
                 <button className={styles.navclose} onClick={() => setOpenMenu(!openMenu)}> <i className='bx bxs-x-circle'></i> </button>
                 <div className={styles.left}>
                     <div className={styles.logo}>
-                        <p> RVE HARDWARE </p>
+                        {/* <p> RVE HARDWARE </p> */}
                     </div>
                     <ul>
                         <li> <Link href="/"><a> Inicio </a></Link> </li>

@@ -8,11 +8,11 @@ export default function Home() {
 
 
   return (
-    <Layout>
+    <Layout logo="./logo.svg">
       <div className={ styles.banner}></div>
       
       <section className={styles.bannercontent}>
-        <div>
+        <div className={styles.left}>
 
         <h2> <em>&ldquo;Al final, ¿Qué distingue al hombre libre del esclavo? ¿Dinero? ¿Poder? No. El hombre elige. El esclavo obedece&rdquo;, Andrew Ryan (&quot;Bioshock&quot;) </em>  </h2>
         <Link href="/">
@@ -26,7 +26,8 @@ export default function Home() {
           <img src="./get.png" alt="" />
         </div>
       </section>
-      <section className={styles.firssection}>
+
+      {/* <section className={styles.firssection}>
 
 <div className={styles.games}>
   <div className={styles.img}>
@@ -42,9 +43,9 @@ export default function Home() {
   </div>
 </div>
 </section>
-      
+       */}
 
-      <section className={styles.secondsection}>
+      {/* <section className={styles.secondsection}>
 
         <div className={styles.tournaments}>
           <div className={styles.content}>
@@ -67,7 +68,7 @@ export default function Home() {
           <div>
           </div>
         </div>
-      </section>
+      </section> */}
     </Layout>
   )
 }
