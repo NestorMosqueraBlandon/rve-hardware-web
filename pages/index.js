@@ -14,7 +14,7 @@ export default function Home() {
       <section className={styles.bannercontent}>
         <div>
 
-        <h2> <em>"Al final, ¿Qué distingue al hombre libre del esclavo? ¿Dinero? ¿Poder? No. El hombre elige. El esclavo obedece", Andrew Ryan ('Bioshock') </em>  </h2>
+        <h2> <em>&ldquo;Al final, ¿Qué distingue al hombre libre del esclavo? ¿Dinero? ¿Poder? No. El hombre elige. El esclavo obedece&rdquo;, Andrew Ryan (&quot;Bioshock&quot;) </em>  </h2>
         <Link href="/">
           <a>
             Elige ahora <i className='bx bx-right-arrow-alt'></i>
