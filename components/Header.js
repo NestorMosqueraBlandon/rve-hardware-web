@@ -24,9 +24,9 @@ export default function Header() {
                     </div>
                     <ul>
                         <li> <Link href="/"><a> Inicio </a></Link> </li>
-                        <li>Premium</li>
-                        <li>Descargas</li>
-                        <li>About</li>
+                        {/* <li>Premium</li> */}
+                        {/* <li>Descargas</li> */}
+                        {/* <li>About</li> */}
                         <li> <Link href="/post"><a> Blog </a></Link></li>
 
                     </ul>
@@ -35,9 +35,9 @@ export default function Header() {
                     <div className={styles.fot}>
                     <i className='bx bx-world'></i>
                     <select name="" id="" className={styles.select}>
-                        <option value="">Idioma</option>
-                        <option value="">Espanol</option>
-                        <option value="">Ingles</option>
+                        <option value="">Español</option>
+                        {/* <option value="">Espanol</option> */}
+                        {/* <option value="">Ingles</option> */}
                     </select>
                     </div>
 
