@@ -17,6 +17,7 @@
     background-color: #100f10;
     padding:2rem;
     transition: 1s;
+    z-index: 999;
 }
 
 .navopen{
@@ -28,6 +29,7 @@
     background-color: #100f10;
     padding:2rem;
     transition: 1s;
+    z-index: 999;
 }
 
 .logo img{

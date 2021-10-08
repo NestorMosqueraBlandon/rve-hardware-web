@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { ApolloClient, InMemoryCache, gql } from "@apollo/client"
 import Layout from '../../components/Layout';
 import styles from '../../styles/Blog.module.css'
 import { format, register } from 'timeago.js';
+import { LOAD_POST } from '../../Graphql/Queries';
 
 export default function blog(props) {
 
@@ -29,7 +30,7 @@ export default function blog(props) {
 
     const { post } = props;
 
-    console.log(post[0].title)
+
     return (
         <Layout>
             <div className={styles.container}>
@@ -44,7 +45,7 @@ export default function blog(props) {
                     <h2>{post[0].title}</h2>
                     <div className={styles.contentdata}>
                         <span className={styles.blogcategory}> <i className='blue bx bxs-circle'></i> {post[0].category}</span>
-                        <span><i className='bx bx-calendar-event'></i> {timeago(post.createdAt)} </span>
+                        <span><i className='bx bx-calendar-event'></i> {timeago(post[0].createdAt)} </span>
                     </div>
                     <picture>
                         <img src={`../bg.png`} alt={post[0].title} />
@@ -79,23 +80,13 @@ export async function getServerSideProps(context) {
         cache: new InMemoryCache()
     })
 
-    const { data } = await client.query({
-        query: gql`
-        query {
-          post(slug: "${slug}"){
-            title
-            description
-            createdAt
-            sanitizedHtml
-            category
-          }
-        }
-      `
+    const {data} = await client.query({
+        query: LOAD_POST, variables: {slug: slug}
     })
 
     return {
         props: {
-            post: data.post
+            post: data.getPost
         }
     }
 }
