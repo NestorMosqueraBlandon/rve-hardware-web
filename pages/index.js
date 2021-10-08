@@ -17,7 +17,7 @@ export default function Home() {
         <h2> <em>"Al final, ¿Qué distingue al hombre libre del esclavo? ¿Dinero? ¿Poder? No. El hombre elige. El esclavo obedece", Andrew Ryan ('Bioshock') </em>  </h2>
         <Link href="">
           <a>
-            Elige ahora <i class='bx bx-right-arrow-alt'></i>
+            Elige ahora <i className='bx bx-right-arrow-alt'></i>
           </a>
         </Link>
         </div>
