@@ -91,7 +91,7 @@ export default function Index() {
           <Carousel axis="horizontal">
             
             {items.map((item) => (
-              <div>
+              <div key={item.name}>
                 {/* <img src={item.img} alt="" /> */}
                 <p className="legend">{item.name}</p>
                 <Carousel axis="vertical" swipeable verticalSwipe useKeyboardArrows infiniteLoop>
