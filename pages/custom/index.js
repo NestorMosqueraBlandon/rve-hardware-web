@@ -97,7 +97,7 @@ export default function Index() {
                 <Carousel axis="vertical" swipeable verticalSwipe useKeyboardArrows infiniteLoop>
                   <button >HOla</button>
                   {item.specs.map((spec) => (
-                    <div>
+                    <div key={spec.name}>
                     <img src="farcry.jpg" alt="" />
                     <p className="legend">{spec.name}</p>
                     </div>
