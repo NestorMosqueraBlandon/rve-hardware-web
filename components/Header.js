@@ -24,9 +24,9 @@ export default function Header({logo}) {
                     </div>
                     <ul>
                         <li> <Link href="/"><a> Inicio </a></Link> </li>
-                        {/* <li>Premium</li> */}
-                        {/* <li>Descargas</li> */}
-                        {/* <li>About</li> */}
+                        <li>Premium</li>
+                        <li>Descargas</li>
+                        <li>About</li>
                         <li> <Link href="/post"><a> Blog </a></Link></li>
 
                     </ul>

@@ -98,7 +98,7 @@ export default function Index() {
                   <button >HOla</button>
                   {item.specs.map((spec) => (
                     <div key={spec.name}>
-                    <img src="farcry.jpg" alt="" />
+                    <img src="./farcry.jpg" alt="" />
                     <p className="legend">{spec.name}</p>
                     </div>
                   ))}  

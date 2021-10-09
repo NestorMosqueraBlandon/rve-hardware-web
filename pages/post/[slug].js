@@ -32,7 +32,7 @@ export default function blog(props) {
 
 
     return (
-        <Layout>
+        <Layout logo="../logo.svg">
             <div className={styles.container}>
                 <div className={styles.aside}>
                     <h2>Buscas una PC?</h2>

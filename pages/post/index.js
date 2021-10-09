@@ -27,7 +27,7 @@ export default function Index({posts}) {
     const timeago = timestamp => format(timestamp, 'es_ES');
 
     return (
-        <Layout>
+        <Layout logo="../logo.svg">
             <div className={styles.blogheader}>
                 <ul>
                     <li className={styles.active} >Todo</li>

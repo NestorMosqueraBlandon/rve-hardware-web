@@ -7,7 +7,7 @@ export default function Layout({title, description, children, logo}) {
     return (
         <>
             <Head>
-                <title>{title ? `${title} - Real Vision Hardware` : 'Real Vision Hardware'}</title>
+                <title>{title ? `${title} - Real Vision Hardware` : 'Real Vision Hardware : PC Gaming y Computadoras Colombia'}</title>
                 {description && <meta name="description" content={description}></meta>}
                 <link rel="icon" href="/favicon.ico" />
                 <link rel="preconnect" href="https://fonts.googleapis.com"/>

@@ -193,7 +193,7 @@
         justify-content: space-between;
         flex-wrap: wrap;
         flex-direction: row;
-        margin: 1rem 2rem;
+        margin: 1rem 8rem;
         padding-bottom: 2rem;
         border-bottom: 1px solid rgba(255, 255, 255, .1);
     }
@@ -212,6 +212,7 @@
 
     .blogbanner{
         flex-direction: row;
+        margin: 1rem 8rem;
     }
 
     .blogbanner a{
@@ -229,6 +230,7 @@
         grid-template-columns:  1fr 3fr 1fr;
         align-items: flex-start;
         justify-content: center;
+        margin: 3rem 8rem;
     }
     
 
