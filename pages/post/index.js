@@ -41,7 +41,7 @@ export default function Index({posts}) {
             </div>
             <div className={styles.blogbanner}>
                 <picture>
-                    <img src="/bg.png" alt={posts[posts.length - 1].title} />
+                    <img src={posts[posts.length - 1].image? posts[posts.length - 1].image : "/bg.png"} alt={posts[posts.length - 1].title} />
                 </picture>
                 <div>
                     <span>{posts[posts.length - 1].category}</span>
