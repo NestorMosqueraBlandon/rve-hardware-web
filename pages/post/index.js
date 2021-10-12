@@ -57,7 +57,7 @@ export default function Index({posts}) {
                         <Link href={`/post/${post.slug}`}>
                             <a>
                         <picture>
-                            <img src={post.img? post.img : "./bg.png"} alt={post.title} />
+                            <img src={post.image? post.image : "./bg.png"} alt={post.title} />
                         </picture>
                         <span className={styles.blogcategory}>{post.category}</span>
                         <h2>{post.title}</h2>
@@ -89,6 +89,7 @@ export async function getServerSideProps(){
             sanitizedHtml
             category
             slug
+            image
           }
         }
       `

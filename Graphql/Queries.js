@@ -9,6 +9,7 @@ export const LOAD_POST = gql`
             category
             slug
             createdAt
+            image
         }
     }
 `

@@ -48,7 +48,7 @@ export default function blog(props) {
                         <span><i className='bx bx-calendar-event'></i> {timeago(post[0].createdAt)} </span>
                     </div>
                     <picture>
-                        <img src={`../bg.png`} alt={post[0].title} />
+                        <img src={post[0].image? post[0].image : `../bg.png`} alt={post[0].title} />
                     </picture>
                 </div>
                 <div></div>
