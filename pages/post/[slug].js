@@ -45,10 +45,16 @@ export default function blog(props) {
                     <h2>{post[0].title}</h2>
                     <div className={styles.contentdata}>
                         <span className={styles.blogcategory}> <i className='blue bx bxs-circle'></i> {post[0].category}</span>
+                        <span className={styles.bloguser}> 
+                            <div className={styles.blogpicture}>
+                                <img src={`.${post[0].userphoto}`} alt={post[0].name} />
+                            </div>
+                            <h4 className={styles.blogusername}>{post[0].username}</h4>
+                        </span>
                         <span><i className='bx bx-calendar-event'></i> {timeago(post[0].createdAt)} </span>
                     </div>
                     <picture>
-                        <img src={post[0].image? post[0].image : `../bg.png`} alt={post[0].title} />
+                        <img src={post[0].image ? post[0].image : `../bg.png`} alt={post[0].title} />
                     </picture>
                 </div>
                 <div></div>
@@ -80,8 +86,8 @@ export async function getServerSideProps(context) {
         cache: new InMemoryCache()
     })
 
-    const {data} = await client.query({
-        query: LOAD_POST, variables: {slug: slug}
+    const { data } = await client.query({
+        query: LOAD_POST, variables: { slug: slug }
     })
 
     return {

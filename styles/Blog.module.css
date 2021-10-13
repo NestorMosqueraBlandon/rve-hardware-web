@@ -15,6 +15,23 @@
     margin-bottom: 1rem;
 }
 
+.blogpicture{
+    width: 30px;
+    height: 30px;
+    overflow: hidden;
+    border-radius: 50px;
+}
+
+.blogusername{
+    font-weight: 300;
+    font-size: 1.2rem;
+    margin-left: .5rem;
+}
+
+.bloguser{
+    display: flex;
+    align-items: center;
+}
 .blogheader ul li{
     padding-right: 1.6rem;
     padding-top: 1rem;

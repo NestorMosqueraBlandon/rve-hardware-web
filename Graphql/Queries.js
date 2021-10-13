@@ -10,6 +10,9 @@ export const LOAD_POST = gql`
             slug
             createdAt
             image
+            userphoto
+            username
+
         }
     }
 `
