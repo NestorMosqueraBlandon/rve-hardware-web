@@ -3,6 +3,7 @@ import styles from '../../styles/Layout.module.css'
 import Link from 'next/link';
 import TournamentCard from "../../components/TournamentCard";
 import GameCard from "../../components/GameCard";
+import StreamCard from "../../components/StreamCard";
 
 export default function Tournament() {
     return (
@@ -60,6 +61,18 @@ export default function Tournament() {
                 <button>Leer más</button>
                 </div>
 
+            </section>
+            <section className={styles.section}>
+                <div className={styles.sectionheader}>
+                    <h2>Streamers Destacados</h2>
+                    <Link href={`/post`}>Ver todo</Link>
+                </div>
+                <div className={styles.flex}>
+                    <StreamCard image="./img/pm.png" name="Javier Calde" />
+                    <StreamCard image="./img/cto.png" name="Luis Mosquera" />
+                    <StreamCard image="./img/cio.png" name="Juan Chaverra" />
+                    <StreamCard image="./img/cmo.png" name="Jhonier Pizarro" />
+                </div>
             </section>
             
         </LayoutTournament>

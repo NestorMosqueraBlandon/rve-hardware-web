@@ -238,3 +238,116 @@
     filter: opacity(.3) grayscale(100%);
     object-fit: cover;
 }
+
+.stream{
+    border: 1px solid rgba(255, 255, 255, .1);
+    width: 250px;
+    height: 320px;
+    overflow: hidden;
+    padding: 1rem;
+    border-radius: .5rem;
+}
+
+.streamheader{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.streamheader span{
+    background-color: rgba(255, 255, 255, .1);
+    border-radius: .5rem;
+    padding: .1rem .5rem;
+    color: rgba(255, 255, 255, .5);
+    font-size: 1.3rem;
+}
+
+.streampicture{
+    border-radius: 5rem;
+    overflow: hidden;
+    height: 100px;
+    width: 100px;
+    margin: 0 auto;
+    border: 2px solid royalblue;
+    position: relative;
+}
+
+.streampicture span{
+    position: absolute;
+    bottom: 0;
+    background-color: royalblue;
+    color: #f2f6fa;
+    right: calc(50% - 11px);
+    border-radius: .5rem;
+    font-size: 1rem;
+    padding: .1rem .5rem;
+}
+
+.streamfooter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.streamfooter button{
+    padding: 1rem;
+    width: 100px;
+    border: none;
+    border-radius: .5rem;
+    color: #f2f6fa;
+}
+
+.streamfooter button{
+    background-color: royalblue;
+}
+
+.streamfooter button:first-child{
+
+    background-color: rgba(255, 255, 255, .05);
+    border: 1px solid royalblue;
+
+}
+
+.stream h2{
+    text-align: center;
+    font-size: 1.4rem;
+    margin-top: .5rem;
+}
+
+.dots{
+    display: flex;
+    font-size:.8rem;
+    justify-content: space-evenly;
+    align-items: center;
+    font-weight: 600;
+    color: rgba(255, 255, 255, .5);
+    margin-top: .5rem;
+}
+
+.streamdata{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.streamdata span{
+    border: 1px solid rgba(255, 255, 255, .05);
+    border-radius: .5rem;
+    font-size: 1rem;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+.streamdata span h4
+{
+    font-size: 1.5rem;
+}
+
+.streamdata span p
+{
+    font-size: .8rem;
+}
+
