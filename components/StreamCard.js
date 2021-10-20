@@ -4,8 +4,8 @@ export default function StreamCard({image, name}) {
     return (
         <div className={styles.stream}>
             <div className={styles.streamheader}>
-                <span><i class='bx bx-heart'></i></span>
-                <span><i class='bx bx-dots-horizontal-rounded' ></i></span>
+                <span><i className='bx bx-heart'></i></span>
+                <span><i className='bx bx-dots-horizontal-rounded' ></i></span>
             </div>
             <div>
                 <div className={styles.streampicture}>

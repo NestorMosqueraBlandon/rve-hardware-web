@@ -17,7 +17,7 @@ export default function TournamentCard() {
                 </div>
                 <div>
                     <h2>FAR CRY 6</h2>
-                    <p><i class='bx bxs-flag-alt' ></i> Termina en 4D 3H 43M</p>
+                    <p><i className='bx bxs-flag-alt' ></i> Termina en 4D 3H 43M</p>
                 </div>
             </div>
             <div className={styles.cardfooter}>
