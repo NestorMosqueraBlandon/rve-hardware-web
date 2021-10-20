@@ -8,7 +8,7 @@ export default function Home() {
 
 
   return (
-    <Layout logo="./logo.svg">
+    <Layout logo="./img/logo/logo.svg">
       <div className={ styles.banner}></div>
       
       <section className={styles.bannercontent}>

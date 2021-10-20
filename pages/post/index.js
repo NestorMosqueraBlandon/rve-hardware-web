@@ -27,15 +27,15 @@ export default function Index({posts}) {
     const timeago = timestamp => format(timestamp, 'es_ES');
 
     return (
-        <Layout logo="../logo.svg">
+        <Layout logo="../img/logo/logo.svg">
             <div className={styles.blogheader}>
                 <ul>
                     <li className={styles.active} >Todo</li>
-                    <li>Noticias</li>
-                    <li>Reviews</li>
-                    <li>Gaming</li>
-                    <li>Software</li>
-                    <li>Hardware</li>
+                    <li>Noticias </li>
+                    <li>Reviews  </li>
+                    <li>Gaming   </li>
+                    <li>Software </li>
+                    <li>Hardware </li>
                 </ul>
                 <input type="text" placeholder="Buscar en el blog" />
             </div>

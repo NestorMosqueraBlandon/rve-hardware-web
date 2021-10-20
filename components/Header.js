@@ -10,8 +10,8 @@ export default function Header({logo}) {
             <div className={styles.menu} onClick={() => setOpenMenu(!openMenu)}>
               <i className='bx bx-menu' ></i>
             </div>
-            <div className={styles.logo}>
-                <img src={logo} alt="Real Vision Hardware Logo" />
+            <div className={styles.logomobile}>
+                <img src="./logo.svg" alt="Real Vision Hardware Logo" />
             </div>
             <div>
 
@@ -20,15 +20,15 @@ export default function Header({logo}) {
                 <button className={styles.navclose} onClick={() => setOpenMenu(!openMenu)}> <i className='bx bxs-x-circle'></i> </button>
                 <div className={styles.left}>
                     <div className={styles.logo}>
-                        {/* <p> RVE HARDWARE </p> */}
+                    <img src={logo} alt="Real Vision Hardware Logo" />
                     </div>
                     <ul>
                         <li> <Link href="/"><a> Inicio </a></Link> </li>
                         <li>Premium</li>
                         <li>Descargas</li>
                         <li>About</li>
+                        <li><Link href="/tournament"><a> Torneos </a></Link></li>
                         <li> <Link href="/post"><a> Blog </a></Link></li>
-
                     </ul>
                 </div>
                 <div className={styles.headerfooter}>
@@ -36,8 +36,7 @@ export default function Header({logo}) {
                     <i className='bx bx-world'></i>
                     <select name="" id="" className={styles.select}>
                         <option value="">Español</option>
-                        {/* <option value="">Espanol</option> */}
-                        {/* <option value="">Ingles</option> */}
+
                     </select>
                     </div>
 

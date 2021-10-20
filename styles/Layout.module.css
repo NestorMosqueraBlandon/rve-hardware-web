@@ -1,0 +1,240 @@
+.main{
+    width: 100%;
+    margin: 0 auto;
+    padding: 7rem;
+    padding-right: 2rem;
+}
+
+.banner{
+    border-radius: .5rem;
+    overflow: hidden;
+    object-fit: contain;
+    /* height: 400px; */
+    width: 100%;
+    position: relative;
+}
+
+.banner img{
+    border-radius: .5rem;
+    width: 100%;
+    opacity: .5;
+}
+
+.banner .data{
+    position: absolute;
+    top: 0;
+    z-index: 999;
+    padding: 5rem;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-top: 80px;    
+}
+
+.type{
+    display: flex;
+    gap: 1rem;
+}
+
+.type span{
+    padding: .5rem;
+    background-color: rgba(0, 0, 0, .7);
+    border-radius: .5rem;
+    font-size: 1.2rem;
+}
+
+.data h2{
+    width: 300px;
+    margin: 2rem 0;
+}
+
+.data p{
+    font-size: 1.4rem;
+    color: royalblue;
+    font-weight: 600;
+}
+
+.data button{
+    background-color: royalblue;
+    border-radius: .5rem;
+    border: none;
+    padding: 1rem 2rem;
+    color: #f2f6fa;
+    margin-top: 2rem;
+}
+
+.sectionheader{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255, 255, 255, .05);
+    padding: 1rem 0;
+}
+
+.sectionheader h2{
+    font-size: 1.4rem;
+}
+
+.sectionheader a{
+    font-size: 1.2rem;
+    color: royalblue;
+}
+
+.flex{
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.picture{
+    position: relative;
+    height: 50%;
+    overflow: hidden;
+}
+
+.picture .typecard{
+    position: absolute;
+    top: 0;
+    padding: 1rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.typecard span{
+    background-color: rgba(0, 0, 0, .8);
+    border-radius: .5rem;
+    font-size: 1rem;
+    padding: .5rem;
+}
+
+.tournamentcard{
+    height: 250px;
+    width: 380px;
+    min-width: 380px;
+    border: 1px solid rgba(255, 255, 255, .05);
+    border-radius: .5rem;
+    overflow: hidden;
+}
+
+.cardcontent{
+    height: 25%;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-start;
+}
+
+.cardcontent h2{
+    font-size: 1.3rem;
+    margin-top: .5rem;
+}
+
+.cardcontent p{
+    font-size: 1rem;
+    line-height: 1rem;
+    color: royalblue;
+    opacity: .8;
+    margin-top: 0;
+}
+
+.cardlogo{
+    width: 30px;
+    border-radius: .5rem;
+    margin: 1rem;
+    overflow: hidden;
+}
+
+.cardlogo img{
+    border-radius: .5rem;
+}
+
+.cardfooter{
+    height: 25%;
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, .05);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cardfooter span{
+    font-size: 1.4rem;
+    color: rgba(255, 255, 255, .5);
+}
+
+.cardfooter span:first-child{
+    color: royalblue;
+    font-weight: 600;
+}
+
+.cardfooter p{
+    font-size: 1.2rem;
+    color: royalblue;
+}
+
+.cardfooter button{
+    background-color: royalblue;
+    border: none;
+    border-radius: .5rem;
+    padding: 1rem;
+    color: #f2f6fa;
+
+}
+
+.picturegame{
+    width: 180px;
+    height: 280px;
+    overflow: hidden;
+    object-fit: cover;
+    border-radius: .5rem;
+}
+
+.picturegame img{
+    border-radius: .5rem;
+}
+
+.extrasection{
+    background-color: #fff;
+    height: 300px;
+    overflow: hidden;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    color: black;
+    border-radius: .5rem;
+}
+
+.extrasection h2{
+    font-weight: 600;
+    margin-bottom: 1rem;
+    letter-spacing: .01rem;
+}
+
+.extrasection p{
+    max-width: 400px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: rgba(0, 0, 0, .8);
+    margin-bottom: 2rem;
+    line-height: 1.8rem;
+}
+
+.extrasection button{
+    padding: 1rem;
+    border: none;
+    background-color: royalblue;
+    color: #f2f6fa;
+    border-radius: .5rem;
+    font-weight: 600;
+}
+
+.extrapicture{
+    width: 500px;
+    height: 100%;
+}
+.extrasection img{
+    filter: opacity(.3) grayscale(100%);
+    object-fit: cover;
+}
