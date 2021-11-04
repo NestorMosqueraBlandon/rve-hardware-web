@@ -15,9 +15,8 @@ export default function HeaderTournament() {
         if(!userInfo){
             return router.push("/register")
         }
-    })
+    }, [])
 
-    console.log(userInfo)
     return (
         <header className={styles.header}>
             <div></div>
