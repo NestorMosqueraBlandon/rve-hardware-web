@@ -22,7 +22,7 @@ export default function Login() {
         update(proxy, result) {
             console.log(result)
             dispatch({ type: "USER_LOGIN", payload: result.data.signin })
-            Cookies.set("userInfo", result.data.signin)
+            Cookies.set("userInfo", JSON.stringify(result.data.signin))
             router.push("/tournament")
         },
         variables: {

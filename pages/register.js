@@ -21,7 +21,7 @@ export default function Register() {
     const [addUser, {loading}] = useMutation(REGISTER_USER,{
         update(proxy, result){
             dispatch({type: "USER_LOGIN", payload: result.data.signup})
-            Cookies.set("userInfo", result.data.signup)
+            Cookies.set("userInfo", JSON.stringify(result.data.signup))
             router.push("/tournament")
         },
         variables: {
