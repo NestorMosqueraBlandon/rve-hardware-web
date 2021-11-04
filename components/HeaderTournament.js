@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router';
-import { useContext } from 'react';
+import { useContext, useEffect } from 'react';
 import { Store } from '../Store';
 import styles from '../styles/HeaderTournament.module.css'
 export default function HeaderTournament() {
@@ -10,6 +10,12 @@ export default function HeaderTournament() {
     const {redirect} = router.query;
 
     const {userInfo} = state;
+
+    useEffect(()=>{
+        if(!userInfo){
+            return router.push("/register")
+        }
+    })
 
     console.log(userInfo)
     return (

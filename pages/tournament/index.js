@@ -14,8 +14,6 @@ export default function Tournament() {
     const {state, dispatch} = useContext(Store);
     const {redirect} = router.query;
 
-    const {userInfo} = state;
-
     // const {state, dispatch} = useContext();
     return (
         <LayoutTournament>
