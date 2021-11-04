@@ -1,7 +1,7 @@
 import Layout from "../components/Layout";
 import styles from '../styles/Login.module.css'
 import Link from 'next/link';
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import { Store } from "../Store";
 import { useMutation, gql } from "@apollo/client";
@@ -10,20 +10,29 @@ import Cookies from "js-cookie";
 export default function Login() {
 
     const router = useRouter();
+    const {redirect} = router.query;
 
     const { state, dispatch } = useContext(Store);
+    const {userInfo} = state;
+
+    console.log(userInfo)
+
+    useEffect(() => {
+        if(userInfo){
+            router.push("/tournament")
+        }
+    }, [])
+
     const [password, setPassword] = useState("");
     const [email, setEmail] = useState("");
 
-    console.log(password)
-    console.log(email)
-
     const [loginUser, { loading }] = useMutation(LOGIN_USER, {
         update(proxy, result) {
-            console.log(result)
+            // console.log(result)
+            console.log(result.data.signin)
             dispatch({ type: "USER_LOGIN", payload: result.data.signin })
             Cookies.set("userInfo", JSON.stringify(result.data.signin))
-            router.push("/tournament")
+            router.push(redirect || "/tournament")
         },
         variables: {
             email, password
@@ -68,7 +77,7 @@ const LOGIN_USER = gql`
 
 mutation signin($email: String!, $password: String!){
     signin(email: $email, password: $password){
-        id email username points, firstname, lastname, createdAt
+        id email username points, firstname, lastname, createdAt, token
     }   
 }
 `

@@ -7,8 +7,9 @@ import StreamCard from "../../components/StreamCard";
 import { useRouter } from "next/dist/client/router";
 import { useContext, useEffect } from "react";
 import { Store } from "../../Store";
+import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
 
-export default function Tournament() {
+export default function Tournament({users}) {
 
     const router = useRouter();
     const {state, dispatch} = useContext(Store);
@@ -83,13 +84,48 @@ export default function Tournament() {
                     <Link href={`/post`}>Ver todo</Link>
                 </div>
                 <div className={styles.flex}>
-                    <StreamCard image="./img/pm.png" name="Javier Calde" />
-                    <StreamCard image="./img/cto.png" name="Luis Mosquera" />
-                    <StreamCard image="./img/cio.png" name="Juan Chaverra" />
-                    <StreamCard image="./img/cmo.png" name="Jhonier Pizarro" />
+                    {users.map((user, index) => (
+                        <StreamCard key={user.id} image={user.photo} level={user.level} name={user.firstname + " " + user.lastname} games={user.games} followers={user.followers} tournaments={user.tournaments} points={user.points} />
+                    ))}
+                    {/* <StreamCard image="./img/cto.png" name="Luis Mosquera" /> */}
+                    {/* <StreamCard image="./img/cio.png" name="Juan Chaverra" /> */}
+                    {/* <StreamCard image="./img/cmo.png" name="Jhonier Pizarro" /> */}
                 </div>
             </section>
             
         </LayoutTournament>
     )
+}
+
+
+export async function getServerSideProps(){
+
+    const client = new ApolloClient({
+        uri: "https://rveapiql.herokuapp.com",
+        cache: new InMemoryCache()
+    })
+
+    const {data} = await client.query({
+        query: gql`
+        query {
+          users{
+            id
+            firstname
+            lastname
+            points
+            games
+            tournaments
+            followers
+            level
+            photo
+          }
+        }
+      `
+    })
+
+    return {
+        props: {
+            users: data.users
+        }
+    }
 }

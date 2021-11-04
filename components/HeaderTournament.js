@@ -11,6 +11,9 @@ export default function HeaderTournament() {
 
     const { userInfo } = state;
 
+    
+    console.log(userInfo)
+
     useEffect(() => {
         if (!userInfo) {
             return router.push("/register")
