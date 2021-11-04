@@ -40,7 +40,7 @@ export default function Header({logo}) {
                     </select>
                     </div>
 
-                    <button className={styles.success}>Registrarse</button>
+                    <button className={styles.success}> <Link href="/register"><a> Registrarse</a></Link></button>
                     <button className={styles.normal}>Iniciar Sesion</button>
                 </div>
             </nav>

@@ -2,8 +2,15 @@ import '../styles/globals.css'
 import Router from 'next/router'
 import { useState } from 'react'
 import LoadingBox from '../components/LoadingBox';
+import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
+import { StorePorvider } from '../Store';
 
 function MyApp({ Component, pageProps }) {
+
+  const client = new ApolloClient({
+    uri: "https://rveapiql.herokuapp.com",
+    cache: new InMemoryCache()
+})
   
   const [loading, setLoading] = useState(false);
 
@@ -16,11 +23,13 @@ function MyApp({ Component, pageProps }) {
   })
 
   return (
-    <>
+    <ApolloProvider client={client}>
+      <StorePorvider>
     {loading? <LoadingBox color="white" /> : 
       <Component {...pageProps} />    
     }
-    </>
+    </StorePorvider>
+    </ApolloProvider>
   )
   
 }

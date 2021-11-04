@@ -3,9 +3,30 @@ import Link from 'next/link'
 import Image from 'next/image'
 import Layout from '../components/Layout'
 import styles from '../styles/Home.module.css'
+import { format, register } from 'timeago.js';
+import {ApolloClient, InMemoryCache, gql}from "@apollo/client"
 
-export default function Home() {
+export default function Home({posts}) {
 
+  register('es_ES', (number, index, total_sec) => [
+    ['justo ahora', 'ahora mismo'],
+    ['hace %s segundos', 'en %s segundos'],
+    ['hace 1 minuto', 'en 1 minuto'],
+    ['hace %s minutos', 'en %s minutos'],
+    ['hace 1 hora', 'en 1 hora'],
+    ['hace %s horas', 'in %s horas'],
+    ['hace 1 dia', 'en 1 dia'],
+    ['hace %s dias', 'en %s dias'],
+    ['hace 1 semana', 'en 1 semana'],
+    ['hace %s semanas', 'en %s semanas'],
+    ['1 mes', 'en 1 mes'],
+    ['hace %s meses', 'en %s meses'],
+    ['hace 1 año', 'en 1 año'],
+    ['hace %s años', 'en %s años']
+][index]);
+
+
+const timeago = timestamp => format(timestamp, 'es_ES');
 
   return (
     <Layout logo="./img/logo/logo.svg">
@@ -22,9 +43,42 @@ export default function Home() {
         </Link>
         </div>
 
-        <div>
+        {/* <div>
           <img src="./get.png" alt="" />
-        </div>
+        </div> */}
+      </section>
+
+      <section className={styles.about}>
+        <h2>SOBRE NOSOTROS</h2>
+        <p className={styles.text}>Creamos las experiencias de entretenimiento y juegos interactivos más épicos. Nuestras plataformas sumergen a los jugadores en mundos nuevos e inimaginables y ofrecen innumerables formas de jugar dentro de ellos. Construimos comunidades que unen a las personas con propósito y pertenencia. Hacemos que cada día sea más divertido con juegos desde Candy Crush ™, Call of Duty® y World of Warcraft® hasta Overwatch®, Hearthstone® y Diablo®. Hay algo para todos. Se necesitan héroes para convertirse en héroes, y quines trabajamos, en Real Vision Hardware, son algunos de los mejores y más brillantes talentos en todo el mundo de la tecnología, los medios y el entretenimiento. El trabajo duro vale la pena y estamos orgullosos de esforzarnos cada dia para lograr nuestros objetivos.</p>
+      </section>
+
+
+      <section className={styles.about}>
+      <h2>BLOG</h2>
+
+      <div className={styles.bloglist}>
+                {posts.map((post, index) => (
+                    <div key={post._id} className={styles.blogitem}>
+                        <Link href={`/post/${post.slug}`}>
+                            <a>
+                        <picture>
+                            <img src={post.image? post.image : "./bg.png"} alt={post.title} />
+                        </picture>
+                        <span className={styles.blogcategory}>{post.category}</span>
+                        <h2>{post.title}</h2>
+                        <p>{post.description}</p>
+                        <span className={styles.blogdate}>{timeago(post.createdAt)}</span>
+                        </a>
+                        </Link>
+                    </div>
+                ))}
+            </div>
+      </section>
+
+      <section className={styles.about}>
+
+
       </section>
 
       {/* <section className={styles.firssection}>
@@ -71,4 +125,36 @@ export default function Home() {
       </section> */}
     </Layout>
   )
+}
+
+
+
+export async function getServerSideProps(){
+
+  const client = new ApolloClient({
+      uri: "https://rveapiql.herokuapp.com",
+      cache: new InMemoryCache()
+  })
+
+  const {data} = await client.query({
+      query: gql`
+      query {
+        posts{
+          title
+          description
+          createdAt
+          sanitizedHtml
+          category
+          slug
+          image
+        }
+      }
+    `
+  })
+
+  return {
+      props: {
+          posts: data.posts
+      }
+  }
 }

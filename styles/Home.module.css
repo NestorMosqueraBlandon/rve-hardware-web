@@ -17,6 +17,7 @@
 .bannercontent{
     min-height: 80vh;
     padding: 4rem 2rem;
+    text-align: center;
 }
 
 .bannercontent a{
@@ -360,4 +361,57 @@
     margin-top: 180px;
 }
 
+}
+
+.about{
+    margin-top: 15rem;
+    padding: 0 12rem;
+}
+
+.about h2{
+    font-size: 5rem;
+    font-weight: 400;
+    color: #4169e1;
+    letter-spacing: .6rem;
+}
+.about .text{
+    max-width: 50%;
+}
+
+.bloglist{
+    margin: 0 ;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 2rem;
+    overflow: scroll;
+    /* flex-wrap: wrap; */
+}
+
+.blogitem{
+    min-width: 320px;
+    width: 320px;
+}
+
+.blogitem h2{
+    line-height: 2.5rem;
+    font-weight: 600;
+    margin-top: 1rem;
+    font-size: 1.8rem;
+    letter-spacing: normal;
+}
+
+.blogitem p{
+    width: 100%;
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, .5);
+    margin: 1rem 0;
+}
+
+.blogdate{
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: rgba(255, 255, 255, .4);
+    border-right: 3px solid rgba(255, 255, 255, .1);
+    padding-right: 1rem;
 }
