@@ -21,7 +21,7 @@ export default function HeaderTournament() {
         <header className={styles.header}>
             <div></div>
             <input type="text" className={styles.searchbar} placeholder="Escribe algo para buscar" />
-            <div className={styles.profile} title="Puntos"><i className='bx bxs-coin-stack'></i>  {userInfo.points} {userInfo.firstname} {userInfo.lastname}</div>
+            <div className={styles.profile} title="Puntos"><i className='bx bxs-coin-stack'></i>  {userInfo? userInfo.points : 0} {userInfo? userInfo.firstname : ""} {userInfo? userInfo.lastname : ""}</div>
         </header>
     )
 }
