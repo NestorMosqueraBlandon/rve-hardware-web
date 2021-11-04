@@ -5,7 +5,7 @@ import TournamentCard from "../../components/TournamentCard";
 import GameCard from "../../components/GameCard";
 import StreamCard from "../../components/StreamCard";
 import { useRouter } from "next/dist/client/router";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { Store } from "../../Store";
 
 export default function Tournament() {
@@ -14,7 +14,13 @@ export default function Tournament() {
     const {state, dispatch} = useContext(Store);
     const {redirect} = router.query;
 
-    // const {state, dispatch} = useContext();
+    const { userInfo } = state;
+
+    useEffect(() => {
+        if (!userInfo) {
+            return router.push("/register")
+        }
+    }, [])
     return (
         <LayoutTournament>
             <div className={styles.banner}>

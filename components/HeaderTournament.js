@@ -6,13 +6,13 @@ export default function HeaderTournament() {
 
 
     const router = useRouter();
-    const {state, dispatch} = useContext(Store);
-    const {redirect} = router.query;
+    const { state, dispatch } = useContext(Store);
+    const { redirect } = router.query;
 
-    const {userInfo} = state;
+    const { userInfo } = state;
 
-    useEffect(()=>{
-        if(!userInfo){
+    useEffect(() => {
+        if (!userInfo) {
             return router.push("/register")
         }
     }, [])
