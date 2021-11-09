@@ -25,15 +25,15 @@ export default function Tournament({users}) {
     return (
         <LayoutTournament>
             <div className={styles.banner}>
-                <img src="./newbanner.jpg" alt="" />
+                <img src="./freefire.jpg" alt="" />
                 <div className={styles.data}>
                     <div className={styles.type}>
                         <span>Entrada Gratis</span>
-                        <span>Liga Ferox Gratis</span>
-                        <span>PC</span>
+                        <span>Liga RVE Gratis</span>
+                        <span>Mobile/PC</span>
                     </div>
-                    <h2>Rainbow Six Siege Deragon tournament</h2>
-                    <p>Termina en 4D 3H 43M</p>
+                    <h2>Free Fire tournament</h2>
+                    <p>Empeiza en 5 Dias</p>
                     <button>Leer más</button>
                 </div>
             </div>
@@ -43,12 +43,13 @@ export default function Tournament({users}) {
                     <Link href={`/post`}>Ver todo</Link>
                 </div>
                 <div className={styles.flex}>
+                    <h2>AUN NO HAY TORNEOS</h2>
+                    {/* <TournamentCard />
                     <TournamentCard />
                     <TournamentCard />
                     <TournamentCard />
                     <TournamentCard />
-                    <TournamentCard />
-                    <TournamentCard />
+                    <TournamentCard /> */}
                 </div>
             </section>
             <section className={styles.section}>
