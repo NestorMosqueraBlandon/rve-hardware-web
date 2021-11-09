@@ -352,3 +352,48 @@
     font-size: .8rem;
 }
 
+
+@media screen and (max-width: 500px) {
+    .main{
+        padding: 5rem 2rem;
+        width: 100vw;
+    }
+
+    .flex{
+        margin-top: 1rem;
+        /* display: flex; */
+        align-items: center;
+        flex-wrap: wrap;
+        gap: .1rem;
+        justify-content: center;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .stream{
+        border: 1px solid rgba(255, 255, 255, .1);
+        width: 180px;
+        height: 320px;
+        overflow: hidden;
+        padding: 1rem;
+        border-radius: .5rem;
+    }
+
+    .stream button:first-child{
+        display: none;
+    }
+ 
+    
+.data h2{
+    width: 300px;
+    margin: 0;
+}
+
+.banner .data{
+    margin: 0;
+}
+
+.banner .data{
+    padding: 1rem;
+}
+}
