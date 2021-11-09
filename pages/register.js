@@ -44,23 +44,23 @@ export default function Register() {
                 <form onSubmit={onSubmit} className={styles.form}>
                 <div className={styles.formgroup}>
                     <label htmlFor="">PRIMER NOMBRE</label>
-                    <input type="text" value={firstname} onChange={(e) => setFirstname(e.target.value)} />
+                    <input type="text" value={firstname} onChange={(e) => setFirstname(e.target.value)} required />
                     </div>
                     <div className={styles.formgroup}>
                     <label htmlFor="">PRIMER APELLIDO</label>
-                    <input type="text" value={lastname} onChange={(e) => setLastname(e.target.value)}/>
+                    <input type="text" value={lastname} onChange={(e) => setLastname(e.target.value)} required/>
                     </div>
                     <div className={styles.formgroup}>
                     <label htmlFor="">USUARIO</label>
-                    <input type="text" value={username} onChange={(e) => setUsername(e.target.value)}/>
+                    <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} required />
                     </div>
                     <div className={styles.formgroup}>
                     <label htmlFor="">CORREO</label>
-                    <input type="email" value={email} onChange={(e) => setEmail(e.target.value)}/>
+                    <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
                     </div>
                     <div className={styles.formgroup}>
                     <label htmlFor="">CONTRASEÑA</label>
-                    <input type="password" value={password} onChange={(e) => setPassword(e.target.value)}/>
+                    <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} required/>
                     </div>
                     <div className={styles.formgroupbtn}>
                     <input type="submit" value="Registrarse" />

@@ -55,11 +55,11 @@ export default function Login() {
                 <form onSubmit={onSubmit} className={styles.form}>
                     <div className={styles.formgroup}>
                         <label htmlFor="">CORREO</label>
-                        <input type="text" value={email} onChange={(e) => setEmail(e.target.value)} />
+                        <input type="text" value={email} onChange={(e) => setEmail(e.target.value)} required />
                     </div>
                     <div className={styles.formgroup}>
                         <label htmlFor="">CONTRASEÑA</label>
-                        <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
+                        <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} required />
                     </div>
                     <div className={styles.formgroupbtn}>
                         <input type="submit" value="Iniciar sesión" />
