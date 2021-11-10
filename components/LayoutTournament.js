@@ -8,7 +8,7 @@ export default function LayoutTournament({title, description, children}) {
     return (
         <>
               <Head>
-                <title>{title ? `${title} - Real Vision Hardware` : 'Real Vision Hardware : PC Gaming y Computadoras Colombia'}</title>
+                <title>{title ? `${title} - Real Vision Gaming` : 'Real Vision Gaming : PC Gaming Y Torneos Internacionales'}</title>
                 {description && <meta name="description" content={description}></meta>}
                 <link rel="icon" href="/favicon.ico" />
                 <link rel="preconnect" href="https://fonts.googleapis.com"/>
