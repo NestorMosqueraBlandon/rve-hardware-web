@@ -15,7 +15,6 @@ export default function Login() {
     const { state, dispatch } = useContext(Store);
     const {userInfo} = state;
 
-    console.log(userInfo)
 
     useEffect(() => {
         if(userInfo){
@@ -28,8 +27,6 @@ export default function Login() {
 
     const [loginUser, { loading }] = useMutation(LOGIN_USER, {
         update(proxy, result) {
-            // console.log(result)
-            console.log(result.data.signin)
             dispatch({ type: "USER_LOGIN", payload: result.data.signin })
             Cookies.set("userInfo", JSON.stringify(result.data.signin))
             router.push(redirect || "/tournament")
@@ -77,7 +74,7 @@ const LOGIN_USER = gql`
 
 mutation signin($email: String!, $password: String!){
     signin(email: $email, password: $password){
-        id email username points, firstname, lastname, createdAt, token
+        id email username points, firstname, lastname, createdAt, token, photo
     }   
 }
 `
