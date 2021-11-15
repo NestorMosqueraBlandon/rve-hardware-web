@@ -71,8 +71,8 @@ export default function Profile() {
                     </div>
                     <h2>{userInfo.firstname}{" "} {userInfo.lastname}</h2>
                     <div className={styles.btns}>
-                        <button href="#" onClick={() => setOpen(true)} ><i class='bx bxs-cog'></i></button>
-                        <Link href=""><a><i class='bx bxs-bookmark' ></i></a></Link>
+                        <button href="#" onClick={() => setOpen(true)} ><i className='bx bxs-cog'></i></button>
+                        <Link href=""><a><i className='bx bxs-bookmark' ></i></a></Link>
                     </div>
                 </div>
                 <div className={styles.userextra}>
@@ -94,7 +94,7 @@ export default function Profile() {
     </LayoutTournament> 
     <div className={open? styles.modal : styles.modalclose}>
         <div className={styles.modalcontent} >
-        <div className={styles.buttonclose} onClick={() => setOpen(false)}><i class='bx bxs-x-circle' ></i></div>
+        <div className={styles.buttonclose} onClick={() => setOpen(false)}><i className='bx bxs-x-circle' ></i></div>
 
         <form onSubmit={submitHandler} encType="multipart/form-data">
             <input type="text" value={firstname} onChange={(e) => setFirstname(e.target.value)} placeholder="Primer Nombre"/>
