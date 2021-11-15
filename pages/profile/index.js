@@ -27,10 +27,13 @@ export default function Profile() {
 
     const [image, setImage] = useState();
 
+    const [open, setOpen] = useState(false)
+
     const submitHandler = async (e) => {
         e.preventDefault();
+        setOpen(false)
         try{
-            const {data} = await axios.post("http://localhost:6002/api/v1/users/update", {userId: email, firstname, lastname, middlename, middlelastname, image})
+            const {data} = await axios.post("https://rveapi.herokuapp.com/api/v1/users/update", {userId: email, firstname, lastname, middlename, middlelastname, image})
             dispatch({ type: 'USER_UPDATE', payload: data });
             Cookies.set('userInfo', JSON.stringify(data));
         }catch(err){
@@ -44,7 +47,7 @@ export default function Profile() {
         bodyFormData.append("file", file);
         try{
             dispatch({type: "UPLOAD_REQUEST"});
-            const {data} = await axios.post("http://localhost:6002/api/v1/users/upload", bodyFormData, {
+            const {data} = await axios.post("https://rveapi.herokuapp.com/api/v1/users/upload", bodyFormData, {
                 headers: {
                     'Content-Type': 'multipart/form-data',
                 }
@@ -68,7 +71,7 @@ export default function Profile() {
                     </div>
                     <h2>{userInfo.firstname}{" "} {userInfo.lastname}</h2>
                     <div className={styles.btns}>
-                        <Link href="/"><a><i class='bx bxs-cog'></i></a></Link>
+                        <button href="#" onClick={() => setOpen(true)} ><i class='bx bxs-cog'></i></button>
                         <Link href=""><a><i class='bx bxs-bookmark' ></i></a></Link>
                     </div>
                 </div>
@@ -89,8 +92,10 @@ export default function Profile() {
             <div></div>
         )}
     </LayoutTournament> 
-    <div className={styles.modal}>
-        <div className={styles.modalcontent}>
+    <div className={open? styles.modal : styles.modalclose}>
+        <div className={styles.modalcontent} >
+        <div className={styles.buttonclose} onClick={() => setOpen(false)}><i class='bx bxs-x-circle' ></i></div>
+
         <form onSubmit={submitHandler} encType="multipart/form-data">
             <input type="text" value={firstname} onChange={(e) => setFirstname(e.target.value)} placeholder="Primer Nombre"/>
             <input type="text" value={middlename} onChange={(e) => setMiddlename(e.target.value)} placeholder="Segundo Nombre"/>
@@ -98,7 +103,6 @@ export default function Profile() {
             <input type="text" value={middlelastname} onChange={(e) => setMiddlelastname(e.target.value)} placeholder="Segundo Apellido"/>
             <input type="text" value={email} onChange={(e) => setEmail(e.target.value)} readOnly/>
             <input type="text" value={phone} onChange={(e) => setPhone(e.target.value)} placeholder="Telefono"/>
-            <input type="text" id="featuredImage" />
             <input type="file" name="file" id="file"  onChange={(e) => uploadHandler(e, "featuredImage")} />
             <input type="submit" value="Guardar"  />
         </form>

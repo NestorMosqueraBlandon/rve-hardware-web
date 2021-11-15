@@ -67,6 +67,15 @@
     color: royalblue;
 }
 
+.btns button{
+    border: 1px solid rgba(255, 255, 255, .1);
+    padding: .5rem .8rem;
+    border-radius: .5rem;
+    font-size: 1.2rem;
+    color: royalblue;
+    background-color:transparent;
+}
+
 .modal
 {
     position: fixed;
@@ -103,4 +112,27 @@
     outline: none;
     padding: 1rem;
     border-radius: .5rem;
+}
+
+.modal form input[type="submit"]{
+    height: 40px;
+    background-color: royalblue;
+    border: none;
+    color: #f2f6fa;
+    outline: none;
+    padding: 1rem;
+    cursor: pointer;
+    border-radius: .5rem;
+}
+
+.modalclose{
+    display: none;
+}
+
+.buttonclose{
+    position: absolute;
+    top: 5rem;
+    right: 5rem;
+    font-size: 3rem;
+    cursor: pointer;
 }
